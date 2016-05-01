@@ -5,7 +5,9 @@ import platform, distutils.core, distutils.extension, Cython.Build
 EXTENSION = distutils.extension.Extension(
     name='simple',
     sources=['simple.pyx'],
-    extra_compile_args=['-Wno-unused-function', '-std=c++11'],
+    extra_compile_args=['-Wno-unused-function', '-std=c++11',
+                        '-mmacosx-version-min=10.9',
+                        ],
     language='c++',
     )
 

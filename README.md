@@ -1,3 +1,7 @@
+Problem fixed!
+
+See https://stackoverflow.com/questions/36960587
+
 Generated Cython code
 
     $ rm -Rf build *.so && python setup.py build_ext
