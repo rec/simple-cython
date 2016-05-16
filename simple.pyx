@@ -1,6 +1,26 @@
 cdef extern from "simple.h":
     struct Simple:
         int x
+    float infinity()
+    float nan()
+
+
+def infinite():
+    return infinity()
+
+def notanumber():
+    return nan()
+
+cdef class Test:
+    def foo(self, x):
+        return _make(x)
+
+cdef Test _make(object x):
+    if isinstance(x, Test):
+        return <Test> x
+    else:
+        return Test(x)
+
 
 cdef class Wrapper:
     cdef Simple simple;
