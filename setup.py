@@ -5,6 +5,7 @@ import platform, setuptools, setuptools, Cython.Build
 EXTENSION = setuptools.extension.Extension(
     name='simple',
     sources=['simple.pyx'],
+    include_dirs = ['subd'],
     extra_compile_args=['-Wno-unused-function', '-std=c++11',
                         '-mmacosx-version-min=10.9',
                         ],
