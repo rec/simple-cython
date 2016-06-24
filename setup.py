@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
-import platform, distutils.core, distutils.extension, Cython.Build
+import platform, setuptools, setuptools, Cython.Build
 
-EXTENSION = distutils.extension.Extension(
+EXTENSION = setuptools.extension.Extension(
     name='simple',
     sources=['simple.pyx'],
     extra_compile_args=['-Wno-unused-function', '-std=c++11',
@@ -16,7 +16,7 @@ EXT_MODULES=Cython.Build.cythonize(
     language='c++',
     )
 
-distutils.core.setup(
+setuptools.setup(
     name='simple',
     ext_modules=EXT_MODULES,
     )

@@ -1,9 +1,11 @@
 #include <limits>
+#include <vector>
+#include <string>
 
 struct Simple {
     int x = 1;
-    int y = 2;
-    int z = 3;
+    // int y = 2;
+    // int z = 3;
 };
 
 float infinity() {
@@ -12,4 +14,8 @@ float infinity() {
 
 float nan() {
     return NAN;
+}
+
+std::vector<std::string> vectorFunction() {
+    return {{"hello", "there", "folks"}};
 }
