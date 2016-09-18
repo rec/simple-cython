@@ -1,21 +1,21 @@
-#include <limits>
-#include <vector>
+#include <stdexcept>
+#include <type_traits>
+#include <string.h>
 #include <string>
+#include <limits>
+#include <math.h>
+#include <string>
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <string>
+#include <stdexcept>
+#include <array>
+#include <set>
+#include <vector>
+#include <memory>
 
-struct Simple {
-    int x = 1;
-    // int y = 2;
-    // int z = 3;
-};
 
-float infinity() {
-    return std::numeric_limits<float>::infinity();
-}
-
-float nan() {
-    return NAN;
-}
-
-std::vector<std::string> vectorFunction() {
-    return {{"hello", "there", "folks"}};
+void test(char* b) {
+    std::cerr << b << '\n';
 }
